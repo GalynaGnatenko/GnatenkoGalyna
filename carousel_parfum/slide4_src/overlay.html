@@ -1,0 +1,30 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:Caveat;src:url(Caveat.ttf)}
+@font-face{font-family:Mont;src:url(Montserrat.ttf)}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1080px;height:1350px;overflow:hidden;background:transparent}
+body{font-family:Mont;color:#1e2846;position:relative}
+.fade{position:absolute;left:0;top:0;width:1080px;height:600px;background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,.4) 70%,rgba(255,255,255,0))}
+.t{position:absolute;left:80px;opacity:0}
+.hand{font-family:Caveat;font-weight:600}
+.l1{top:28px;font-size:96px}
+.l2{top:150px;font-size:52px;font-weight:900;letter-spacing:1px;color:#22305e}
+.l3{top:228px;font-size:36px;font-weight:400;line-height:1.35}
+.l4{top:335px;font-size:52px;line-height:1.0;color:#3d5a9e}
+@keyframes fromL{from{opacity:0;transform:translateX(-160px)}to{opacity:1;transform:none}}
+@keyframes fromR{from{opacity:0;transform:translateX(220px)}to{opacity:1;transform:none}}
+@keyframes fromB{from{opacity:0;transform:translateY(70px)}to{opacity:1;transform:none}}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.a{animation-duration:.7s;animation-fill-mode:both;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
+.fade{animation:fi .6s both}
+.l1{animation-name:fromL;animation-delay:.3s}
+.l2{animation-name:fromR;animation-delay:1.2s}
+.l3{animation-name:fromL;animation-delay:2.2s}
+.l4{animation-name:fromB;animation-delay:3.6s}
+</style></head><body>
+<div class="fade"></div>
+<div class="t a hand l1">Чому вони стійкі?</div>
+<div class="t a l2">ВИСОКА КОНЦЕНТРАЦІЯ ОЛІЙ</div>
+<div class="t a l3">У формулах TWINS підтримується високий<br>відсоток парфумерного концентрату —</div>
+<div class="t a hand l4">на рівні Eau de Parfum<br>або парфумерної витяжки</div>
+</body></html>
