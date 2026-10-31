@@ -4,31 +4,31 @@
 @font-face{font-family:Mont;src:url(Montserrat.ttf)}
 *{margin:0;padding:0;box-sizing:border-box}
 html,body{width:1080px;height:1350px;overflow:hidden}
-body{background:linear-gradient(180deg,#f6f5f3 0%,#eeece9 62%,#fbfbfa 62.2%,#ffffff 100%);font-family:Mont;color:#1e2846;position:relative}
-.t{position:absolute;left:80px;opacity:0}
+body{background:#f2f2f1;font-family:Mont;color:#1e2846;position:relative}
+.t{position:absolute;left:80px;opacity:0;z-index:2}.price{z-index:2}
 .hand{font-family:Caveat;font-weight:600}
-.l1{top:90px;font-size:92px}
-.l2{top:200px;font-size:54px;font-weight:400;letter-spacing:1px}
-.l3{top:270px;font-size:138px;font-weight:900;letter-spacing:4px;color:#22305e}
-.l4{top:440px;font-size:84px;color:#3d5a9e}
-.price{position:absolute;right:90px;top:640px;opacity:0;background:#a9c1e8;color:#1e2846;border-radius:60px;padding:22px 40px;font-size:46px;font-weight:700;transform:rotate(-4deg)}
+.l1{top:55px;font-size:92px}
+.l2{top:160px;font-size:54px;font-weight:400;letter-spacing:1px}
+.l3{top:215px;font-size:138px;font-weight:900;letter-spacing:4px;color:#22305e}
+.l4{top:420px;font-size:76px;line-height:1.0;color:#3d5a9e}
+.price{position:absolute;right:70px;top:600px;opacity:0;background:#a9c1e8;color:#1e2846;border-radius:60px;padding:22px 40px;font-size:46px;font-weight:700;transform:rotate(-4deg)}
 .price small{display:block;font-family:Caveat;font-size:40px;font-weight:500;text-align:center}
 .l5{top:1110px;font-size:46px;font-weight:400;font-style:italic}
 .l6{top:1185px;left:auto;right:80px;font-size:96px;font-weight:700;color:#22305e}
 .l6 u{text-decoration:none;border-bottom:5px solid #a9c1e8}
-#shoe{position:absolute;left:150px;top:560px;width:560px;opacity:0;transform-origin:50% 100%}
+#shoe{position:absolute;left:0;top:-150px;width:1080px;height:1350px;opacity:0}#shoe img{width:100%;height:100%;display:block;-webkit-mask-image:linear-gradient(180deg,#000 85%,transparent 100%)}
 /* animations */
 @keyframes fromL{from{opacity:0;transform:translateX(-160px)}to{opacity:1;transform:none}}
 @keyframes fromR{from{opacity:0;transform:translateX(220px)}to{opacity:1;transform:none}}
 @keyframes fromB{from{opacity:0;transform:translateY(90px)}to{opacity:1;transform:none}}
-@keyframes pop{0%{opacity:0;transform:scale(.6) translateY(80px)}70%{opacity:1;transform:scale(1.04)}100%{opacity:1;transform:none}}
+@keyframes pop{0%{opacity:0;transform:scale(1.12)}100%{opacity:1;transform:scale(1)}}
 @keyframes tag{0%{opacity:0;transform:translateX(200px) rotate(10deg)}100%{opacity:1;transform:rotate(-4deg)}}
 .a{animation-duration:.7s;animation-fill-mode:both;animation-timing-function:cubic-bezier(.2,.8,.2,1)}
 .l1{animation-name:fromL;animation-delay:.3s}
 .l2{animation-name:fromL;animation-delay:.9s}
 .l3{animation-name:fromR;animation-delay:1.4s}
 .l4{animation-name:fromL;animation-delay:2.1s}
-#shoe{animation-name:pop;animation-delay:2.7s;animation-duration:.9s}
+#shoe{animation-name:pop;animation-delay:2.6s;animation-duration:1.4s}
 .price{animation-name:tag;animation-delay:3.6s}
 .l5{animation-name:fromB;animation-delay:4.6s}
 .l6{animation-name:fromR;animation-delay:5.8s}
@@ -36,28 +36,9 @@ body{background:linear-gradient(180deg,#f6f5f3 0%,#eeece9 62%,#fbfbfa 62.2%,#fff
 <div class="t a hand l1">Коли твоя донька</div>
 <div class="t a l2">хоче аромат</div>
 <div class="t a l3">GOOD GIRL</div>
-<div class="t a hand l4">ту саму «туфельку»…</div>
+<div class="t a hand l4">ту саму<br>«туфельку»…</div>
 
-<svg id="shoe" class="a" viewBox="0 0 560 520" xmlns="http://www.w3.org/2000/svg">
- <defs>
-  <linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a4f9a"/><stop offset=".55" stop-color="#16225a"/><stop offset="1" stop-color="#0a1238"/></linearGradient>
-  <linearGradient id="gold" x1="0" x2="1"><stop offset="0" stop-color="#8a6a2a"/><stop offset=".45" stop-color="#f3dc95"/><stop offset="1" stop-color="#9c7a34"/></linearGradient>
-  <linearGradient id="hl" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
-  <radialGradient id="sh"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset="1" stop-color="#000" stop-opacity="0"/></radialGradient>
- </defs>
- <ellipse cx="290" cy="492" rx="250" ry="22" fill="url(#sh)"/>
- <!-- heel -->
- <path d="M400 250 L432 252 L428 488 L418 488 Z" fill="url(#gold)"/>
- <!-- shoe body -->
- <path d="M60 470 C60 430 110 400 170 380 C250 352 300 300 330 240 C350 200 360 150 395 120 C420 100 470 108 480 150 C490 200 470 250 430 270 L405 280 C360 300 330 360 300 420 C285 455 260 478 220 482 L80 486 C66 486 60 480 60 470 Z" fill="url(#g)"/>
- <!-- sole -->
- <path d="M62 474 C150 470 230 474 280 450 C320 430 345 360 400 300" fill="none" stroke="url(#gold)" stroke-width="5"/>
- <!-- glass highlights -->
- <path d="M110 430 C170 400 240 380 300 300 C330 260 345 200 370 160" fill="none" stroke="url(#hl)" stroke-width="14" stroke-linecap="round" opacity=".7"/>
- <path d="M410 140 C440 125 465 140 465 170" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="7" stroke-linecap="round"/>
- <!-- cap -->
- <rect x="398" y="92" width="64" height="34" rx="8" fill="url(#gold)" transform="rotate(-12 430 109)"/>
-</svg>
+<div id="shoe" class="a"><img src="shoe.jpg"></div>
 
 <div class="price a">від 70$<small>за 30 мл</small></div>
 <div class="t a l5">Але ти не можеш собі це дозволити…</div>
